@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 
-const DAY = 24 * 60 * 60 * 1000;
+const CYCLE = 3 * 24 * 60 * 60 * 1000; // 3 days cycle
 
 function remaining() {
-  return DAY - (Date.now() % DAY);
+  return CYCLE - (Date.now() % CYCLE);
 }
 
-const labels = ["ঘণ্টা", "মিনিট", "সেকেন্ড"];
+const labels = ["দিন", "ঘণ্টা", "মিনিট", "সেকেন্ড"];
 
 export function Countdown() {
-  const [ms, setMs] = useState(DAY);
+  const [ms, setMs] = useState(CYCLE);
 
   useEffect(() => {
     setMs(remaining());
@@ -18,14 +18,19 @@ export function Countdown() {
   }, []);
 
   const total = Math.floor(ms / 1000);
-  const parts = [Math.floor(total / 3600), Math.floor((total % 3600) / 60), total % 60];
+  const days = Math.floor(total / (24 * 3600));
+  const hours = Math.floor((total % (24 * 3600)) / 3600);
+  const minutes = Math.floor((total % 3600) / 60);
+  const seconds = total % 60;
+  
+  const parts = [days, hours, minutes, seconds];
 
   return (
     <div className="glass rounded-3xl p-5 sm:p-6">
       <p className="text-center text-xs font-semibold tracking-[0.2em] text-primary uppercase">
         অফার শেষ হতে বাকি
       </p>
-      <div className="mt-4 grid grid-cols-3 gap-3">
+      <div className="mt-4 grid grid-cols-4 gap-3">
         {parts.map((value, i) => (
           <div
             key={labels[i]}
