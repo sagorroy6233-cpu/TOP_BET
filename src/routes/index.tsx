@@ -7,28 +7,30 @@ import {
 } from "@/components/ui/accordion";
 import { Countdown } from "@/components/landing/Countdown";
 import { Reveal } from "@/components/landing/Reveal";
+import { AppPromotion } from "@/components/landing/AppPromotion";
 import heroGlow from "@/assets/hero-glow.jpg";
+import logo from "@/assets/logo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TOP BET - প্রতিদিন ফ্রি মাল্টি" },
+      { title: "11Xbaaji App | খেলুন আরও সহজে" },
       {
         name: "description",
         content:
-          "প্রতিদিন ফ্রি মাল্টি দেয়া হয়, ফ্রিতে নিতে চাইলে এখনই জয়েন করুন আমাদের ফ্রি চ্যানেলে।",
+          "11Xbaaji অ্যাপের মাধ্যমে আপনার স্পোর্টস অভিজ্ঞতা রাখুন আরও সহজ, দ্রুত এবং সবসময় হাতের কাছে।",
       },
-      { property: "og:title", content: "TOP BET - প্রতিদিন ফ্রি মাল্টি" },
+      { property: "og:title", content: "11Xbaaji App | খেলুন আরও সহজে" },
       {
         property: "og:description",
         content:
-          "প্রতিদিন ফ্রি মাল্টি দেয়া হয়, ফ্রিতে নিতে চাইলে এখনই জয়েন করুন আমাদের ফ্রি চ্যানেলে।",
+          "আপনার স্পোর্টস অভিজ্ঞতা, এখন হাতের মুঠোয়।",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Landing,
+  component: AppPromotion,
 });
 
 const stats = [
@@ -67,7 +69,7 @@ const benefits = [
   {
     icon: "✧",
     title: "বিশ্বস্ত প্ল্যাটফর্ম",
-    text: "হাজারো মানুষের আস্থার একটি নাম TOP BET।",
+    text: "হাজারো মানুষের আস্থার একটি নাম 11Xbaaji।",
   },
 ];
 
@@ -75,7 +77,7 @@ const testimonials = [
   {
     name: "রাকিব হাসান",
     role: "মেম্বার, ঢাকা",
-    text: "TOP BET এর ফ্রি মাল্টি খেলে আমি অনেক লাভবান হয়েছি। ওদের প্রেডিকশন ৯৯% শিওর থাকে।",
+    text: "11Xbaaji এর ফ্রি মাল্টি খেলে আমি অনেক লাভবান হয়েছি। ওদের প্রেডিকশন ৯৯% শিওর থাকে।",
   },
   {
     name: "সাগর আহমেদ",
@@ -85,7 +87,7 @@ const testimonials = [
   {
     name: "মাহমুদুল করিম",
     role: "মেম্বার, চট্টগ্রাম",
-    text: "খুবই ভালো রেসপন্স এবং ফ্রি মাল্টিগুলো সত্যিই দারুণ কাজ করে। ধন্যবাদ TOP BET!",
+    text: "খুবই ভালো রেসপন্স এবং ফ্রি মাল্টিগুলো সত্যিই দারুণ কাজ করে। ধন্যবাদ 11Xbaaji!",
   },
 ];
 
@@ -96,7 +98,7 @@ const faqs = [
   },
   {
     q: "কিভাবে জয়েন করবো?",
-    a: "উপরে দেওয়া 'টেলিগ্রাম চ্যানেলে জয়েন করুন' বাটনে ক্লিক করে সহজেই যুক্ত হতে পারবেন।",
+    a: "অ্যাকাউন্ট খুলতে রেজিস্ট্রেশন করুন বাটনে ক্লিক করুন, অথবা এফিলিয়েট হতে এফিলিয়েটে জয়েন করুন বাটনে ক্লিক করুন।",
   },
   {
     q: "নতুনরা কি বুঝতে পারবে?",
@@ -116,21 +118,11 @@ function Landing() {
   return (
     <div className="aurora-bg relative min-h-screen overflow-hidden font-display">
       {/* Nav */}
-      <header className="relative z-20 mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-6 sm:flex sm:justify-between">
+      <header className="relative z-20 mx-auto flex max-w-6xl items-center px-5 py-6">
         <div className="flex min-w-0 items-center gap-3">
-          <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#b4eb4a] text-black text-lg font-bold">
-            T
-          </div>
-          <span className="truncate text-xl font-bold tracking-tight">TOP BET</span>
+          <img src={logo} alt="11Xbaaji logo" className="h-10 w-10 shrink-0 rounded-xl object-contain" />
+          <span className="truncate text-xl font-bold tracking-tight">11Xbaaji</span>
         </div>
-        <a
-          href="https://t.me/+V7VKBvC7fllkOWQ1"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="shrink-0 rounded-full border border-[#b4eb4a]/40 px-5 py-2 text-sm font-semibold text-[#b4eb4a] transition hover:bg-[#b4eb4a] hover:text-black"
-        >
-          এখনই জয়েন করুন
-        </a>
       </header>
 
       {/* Hero */}
@@ -142,7 +134,7 @@ function Landing() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="white"
-              className="w-16 h-16 ml-[-4px]"
+              className="w-16 h-16 -ml-1"
             >
               <path d="M20.9 4.3 17.9 19c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6 8.3-7.5c.4-.3-.1-.5-.6-.2L7.4 13l-4.4-1.4c-1-.3-1-1 .2-1.4l17.2-6.6c.8-.3 1.5.2 1.2 1.7z" />
             </svg>
@@ -157,27 +149,33 @@ function Landing() {
               ফ্রিতে নিতে চাইলে এখনই জয়েন করুন<br />আমাদের ফ্রি চ্যানেলে <span className="inline-block text-[#b4eb4a]">✅</span>
             </p>
             <p className="text-2xl sm:text-3xl font-bold mt-2">
-              Top Bet <span className="text-red-500">❤️</span>
+              11Xbaaji <span className="text-red-500">❤️</span>
             </p>
           </div>
 
           {/* Buttons */}
           <div className="w-full space-y-4">
             <a
-              href="https://t.me/+V7VKBvC7fllkOWQ1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full bg-[#b4eb4a] text-black font-bold text-center py-4 rounded-xl text-lg hover:brightness-110 transition-all shadow-lg animate-glow-pulse"
+              href="https://11xbaaji.live/register"
+              className="block w-full bg-[#b4eb4a] text-black font-bold text-center py-4 rounded-xl text-lg hover:brightness-110 transition-all shadow-lg"
             >
-              টেলিগ্রাম চ্যানেলে জয়েন করুন
+              রেজিস্ট্রেশন করুন
             </a>
             <a
-              href="https://t.me/+V7VKBvC7fllkOWQ1"
+              href="https://11xbaaji.live/"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-[#b4eb4a] text-black font-bold text-center py-4 rounded-xl text-lg hover:brightness-110 transition-all shadow-lg"
             >
-              Telegram Channel Join Now
+              অ্যাপ ইন্সটল করুন
+            </a>
+            <a
+              href="https://11xbaaji.live/Affiliate"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-[#b4eb4a] text-black font-bold text-center py-4 rounded-xl text-lg hover:brightness-110 transition-all shadow-lg"
+            >
+              এফিলিয়েটে জয়েন করুন
             </a>
           </div>
 
@@ -207,7 +205,7 @@ function Landing() {
       <section id="benefits" className="relative z-10 mx-auto max-w-6xl px-5 py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">
-            কেন <span className="text-[#b4eb4a]">TOP BET</span>?
+            কেন <span className="text-[#b4eb4a]">11Xbaaji</span>?
           </h2>
           <p className="mt-4 text-muted-foreground">
             শুধু প্রেডিকশন নয় — একটি সম্পূর্ণ গাইডলাইন, যেখানে প্রতিটি ধাপে আমরা আপনার সাথে আছি।
@@ -308,7 +306,7 @@ function Landing() {
       </section>
 
       <footer className="relative z-10 border-t border-border px-5 py-8 text-center text-xs text-muted-foreground">
-        © 2026 TOP BET. সর্বস্বত্ব সংরক্ষিত।
+        © 2026 11Xbaaji. সর্বস্বত্ব সংরক্ষিত।
       </footer>
 
       {/* Floating Telegram */}
