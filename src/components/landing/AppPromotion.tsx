@@ -23,7 +23,9 @@ const primaryActions = [
   { label: "অ্যাপ ইন্সটল করুন", href: appUrl, icon: Download },
   { label: "রেজিস্ট্রেশন করুন", href: registerUrl, icon: UserRoundPlus },
   { label: "এফিলিয়েটে জয়েন করুন", href: affiliateUrl, icon: Handshake },
-];
+] as const;
+const actionButtonClassName =
+  "inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-(--app-lime) px-5 text-sm font-bold text-(--app-forest) shadow-sm transition hover:-translate-y-0.5 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--app-lime)";
 
 const highlights = [
   {
@@ -67,6 +69,33 @@ function InstallLink({
   );
 }
 
+function ActionButton({
+  action,
+  className = actionButtonClassName,
+}: {
+  action: (typeof primaryActions)[number];
+  className?: string;
+}) {
+  const Icon = action.icon;
+
+  return (
+    <a href={action.href} target="_blank" rel="noopener noreferrer" className={className}>
+      <Icon aria-hidden="true" size={18} />
+      {action.label}
+    </a>
+  );
+}
+
+function ActionButtons({ className }: { className: string }) {
+  return (
+    <div className={className}>
+      {primaryActions.map((action) => (
+        <ActionButton key={action.label} action={action} />
+      ))}
+    </div>
+  );
+}
+
 export function AppPromotion() {
   return (
     <main className="min-h-screen overflow-hidden bg-(--app-paper) text-(--app-ink)">
@@ -98,23 +127,7 @@ export function AppPromotion() {
             <p className="mt-6 max-w-lg text-base leading-8 text-white/70 sm:text-lg">
               আপনার পছন্দের স্পোর্টস, লাইভ ম্যাচের আপডেট আর সহজ অ্যাকাউন্ট অ্যাক্সেস একসঙ্গে পান 11Xbaaji অ্যাপে।
             </p>
-            <div className="mt-9 flex max-w-sm flex-col gap-3">
-              {primaryActions.map((action) => {
-                const Icon = action.icon;
-                return (
-                  <a
-                    key={action.label}
-                    href={action.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-(--app-lime) px-7 text-base font-bold text-(--app-forest) transition hover:-translate-y-0.5 hover:bg-white"
-                  >
-                    <Icon aria-hidden="true" size={18} />
-                    {action.label}
-                  </a>
-                );
-              })}
-            </div>
+            <ActionButtons className="mt-9 grid max-w-sm gap-3" />
             <p className="mt-5 flex items-center gap-2 text-xs text-white/50">
               <ShieldCheck aria-hidden="true" size={15} /> কেবল ১৮ বছর বা তার বেশি বয়সীদের জন্য
             </p>
@@ -183,6 +196,7 @@ export function AppPromotion() {
               return <article key={item.number} className="border-t border-(--app-line) py-6 sm:px-5 first:sm:pl-0 last:sm:col-span-2"><div className="flex items-center justify-between"><span className="grid h-11 w-11 place-items-center rounded-full bg-(--app-lime)/35 text-(--app-forest)"><Icon size={20} /></span><span className="text-xs font-bold tabular-nums text-(--app-muted)">{item.number}</span></div><h3 className="mt-5 text-lg font-bold">{item.title}</h3><p className="mt-2 max-w-sm text-sm leading-6 text-(--app-muted)">{item.text}</p></article>;
             })}
           </div>
+          <ActionButtons className="mt-10 grid gap-3 sm:grid-cols-2 md:col-span-2 lg:grid-cols-3" />
         </div>
       </section>
 
@@ -190,13 +204,15 @@ export function AppPromotion() {
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 sm:py-24 md:grid-cols-[0.8fr_1.2fr] lg:px-12">
           <div className="max-w-md"><p className="text-xs font-bold uppercase tracking-[0.18em] text-(--app-forest)">শুরু করা সহজ</p><h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">কয়েকটি ধাপেই <span className="text-(--app-forest)">শুরু করুন।</span></h2><p className="mt-5 text-base leading-7 text-(--app-muted)">অফিশিয়াল সাইট থেকে অ্যাপ ইন্সটল করে আপনার ডিভাইসেই ব্যবহার শুরু করুন।</p></div>
           <div className="border-t border-(--app-line)">{steps.map((step) => <div key={step.number} className="grid grid-cols-[52px_1fr] gap-4 border-b border-(--app-line) py-6 sm:grid-cols-[72px_1fr] sm:gap-6 sm:py-7"><span className="pt-1 text-sm font-bold tabular-nums text-(--app-forest)">{step.number}</span><div><h3 className="text-lg font-bold">{step.title}</h3><p className="mt-2 max-w-lg text-sm leading-6 text-(--app-muted)">{step.text}</p></div></div>)}</div>
+          <ActionButtons className="mt-10 grid gap-3 sm:grid-cols-2 md:col-span-2 lg:grid-cols-3" />
         </div>
       </section>
 
       <section id="affiliate" className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 sm:pb-24 lg:px-12">
-        <div className="relative overflow-hidden bg-(--app-forest) px-6 py-12 text-white sm:px-12 sm:py-16 lg:px-16">
-          <div className="absolute right-0 top-0 h-full w-1/3 border-l border-white/10" aria-hidden="true" />
-          <div className="relative max-w-2xl"><p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-(--app-lime)"><Trophy size={15} /> পার্টনার প্রোগ্রাম</p><h2 className="mt-5 max-w-xl text-4xl font-bold leading-tight sm:text-5xl">11Xbaaji-এর সঙ্গে এফিলিয়েট পার্টনার হোন।</h2><p className="mt-4 max-w-lg text-sm leading-7 text-white/70">প্রোগ্রামের শর্ত, প্রয়োজনীয় তথ্য এবং যোগদানের ধাপ জানতে অফিসিয়াল এফিলিয়েট পেজটি দেখুন। শুরু করতে উপরের “এফিলিয়েটে জয়েন করুন” বাটনে ট্যাপ করুন।</p></div>
+        <div className="relative grid items-center gap-8 overflow-hidden bg-(--app-forest) px-6 py-12 text-white sm:px-12 sm:py-16 md:grid-cols-[minmax(0,1fr)_auto] lg:px-16">
+          <div className="pointer-events-none absolute inset-y-0 right-[32%] hidden border-l border-white/10 md:block" aria-hidden="true" />
+          <div className="relative max-w-2xl"><p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-(--app-lime)"><Trophy size={15} /> পার্টনার প্রোগ্রাম</p><h2 className="mt-5 max-w-xl text-4xl font-bold leading-tight sm:text-5xl">11Xbaaji-এর সঙ্গে এফিলিয়েট পার্টনার হোন।</h2><p className="mt-4 max-w-lg text-sm leading-7 text-white/70">প্রোগ্রামের শর্ত, প্রয়োজনীয় তথ্য এবং যোগদানের ধাপ জানতে অফিসিয়াল এফিলিয়েট পেজটি দেখুন।</p></div>
+          <ActionButton action={primaryActions[2]} className={`${actionButtonClassName} relative md:min-w-64`} />
         </div>
       </section>
 
@@ -206,6 +222,9 @@ export function AppPromotion() {
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-(--app-forest)">দায়িত্বশীল ব্যবহার</p>
             <h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">বিনোদন থাকুক <span className="text-(--app-forest)">নিয়ন্ত্রণে।</span></h2>
             <p className="mt-5 text-base leading-7 text-(--app-muted)">খেলাকে বিনোদন হিসেবে নিন, আয়ের নিশ্চয়তা হিসেবে নয়। নিজের সীমা ঠিক রাখুন এবং প্রয়োজন হলে বিরতি নিন।</p>
+            <a href="#faq" className="mt-7 inline-flex min-h-12 items-center gap-2 rounded-full border border-(--app-forest)/20 px-5 text-sm font-bold text-(--app-forest) transition hover:bg-white">
+              নিরাপদ ব্যবহারের তথ্য <ArrowRight aria-hidden="true" size={16} />
+            </a>
           </div>
           <div className="border-t border-(--app-line)">
             {[
@@ -245,6 +264,7 @@ export function AppPromotion() {
             ))}
           </div>
         </div>
+        <ActionButtons className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3" />
       </section>
 
       <footer className="border-t border-(--app-line) bg-white px-5 py-8 sm:px-8 lg:px-12">
