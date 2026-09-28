@@ -14,13 +14,13 @@ import logo from "@/assets/logo.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "11Xbaaji App | খেলুন আরও সহজে" },
+      { title: "11xbaaji App | খেলুন আরও সহজে" },
       {
         name: "description",
         content:
-          "11Xbaaji অ্যাপের মাধ্যমে আপনার স্পোর্টস অভিজ্ঞতা রাখুন আরও সহজ, দ্রুত এবং সবসময় হাতের কাছে।",
+          "11xbaaji অ্যাপের মাধ্যমে আপনার স্পোর্টস অভিজ্ঞতা রাখুন আরও সহজ, দ্রুত এবং সবসময় হাতের কাছে।",
       },
-      { property: "og:title", content: "11Xbaaji App | খেলুন আরও সহজে" },
+      { property: "og:title", content: "11xbaaji App | খেলুন আরও সহজে" },
       {
         property: "og:description",
         content:
@@ -69,7 +69,7 @@ const benefits = [
   {
     icon: "✧",
     title: "বিশ্বস্ত প্ল্যাটফর্ম",
-    text: "হাজারো মানুষের আস্থার একটি নাম 11Xbaaji।",
+    text: "হাজারো মানুষের আস্থার একটি নাম 11xbaaji।",
   },
 ];
 
@@ -77,7 +77,7 @@ const testimonials = [
   {
     name: "রাকিব হাসান",
     role: "মেম্বার, ঢাকা",
-    text: "11Xbaaji এর ফ্রি মাল্টি খেলে আমি অনেক লাভবান হয়েছি। ওদের প্রেডিকশন ৯৯% শিওর থাকে।",
+    text: "11xbaaji এর ফ্রি মাল্টি খেলে আমি অনেক লাভবান হয়েছি। ওদের প্রেডিকশন ৯৯% শিওর থাকে।",
   },
   {
     name: "সাগর আহমেদ",
@@ -87,7 +87,7 @@ const testimonials = [
   {
     name: "মাহমুদুল করিম",
     role: "মেম্বার, চট্টগ্রাম",
-    text: "খুবই ভালো রেসপন্স এবং ফ্রি মাল্টিগুলো সত্যিই দারুণ কাজ করে। ধন্যবাদ 11Xbaaji!",
+    text: "খুবই ভালো রেসপন্স এবং ফ্রি মাল্টিগুলো সত্যিই দারুণ কাজ করে। ধন্যবাদ 11xbaaji!",
   },
 ];
 
@@ -120,8 +120,8 @@ function Landing() {
       {/* Nav */}
       <header className="relative z-20 mx-auto flex max-w-6xl items-center px-5 py-6">
         <div className="flex min-w-0 items-center gap-3">
-          <img src={logo} alt="11Xbaaji logo" className="h-10 w-10 shrink-0 rounded-xl object-contain" />
-          <span className="truncate text-xl font-bold tracking-tight">11Xbaaji</span>
+          <img src={logo} alt="11xbaaji logo" className="h-10 w-10 shrink-0 rounded-xl object-contain" />
+          <span className="truncate text-xl font-bold tracking-tight">11xbaaji</span>
         </div>
       </header>
 
@@ -149,7 +149,7 @@ function Landing() {
               ফ্রিতে নিতে চাইলে এখনই জয়েন করুন<br />আমাদের ফ্রি চ্যানেলে <span className="inline-block text-[#b4eb4a]">✅</span>
             </p>
             <p className="text-2xl sm:text-3xl font-bold mt-2">
-              11Xbaaji <span className="text-red-500">❤️</span>
+              11xbaaji <span className="text-red-500">❤️</span>
             </p>
           </div>
 
@@ -167,7 +167,7 @@ function Landing() {
               rel="noopener noreferrer"
               className="block w-full bg-[#b4eb4a] text-black font-bold text-center py-4 rounded-xl text-lg hover:brightness-110 transition-all shadow-lg"
             >
-              অ্যাপ ইন্সটল করুন
+              অ্যাপ ইনস্টল করুন
             </a>
             <a
               href="https://11xbaaji.live/Affiliate"
@@ -205,7 +205,7 @@ function Landing() {
       <section id="benefits" className="relative z-10 mx-auto max-w-6xl px-5 py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">
-            কেন <span className="text-[#b4eb4a]">11Xbaaji</span>?
+            কেন <span className="text-[#b4eb4a]">11xbaaji</span>?
           </h2>
           <p className="mt-4 text-muted-foreground">
             শুধু প্রেডিকশন নয় — একটি সম্পূর্ণ গাইডলাইন, যেখানে প্রতিটি ধাপে আমরা আপনার সাথে আছি।
@@ -306,7 +306,7 @@ function Landing() {
       </section>
 
       <footer className="relative z-10 border-t border-border px-5 py-8 text-center text-xs text-muted-foreground">
-        © 2026 11Xbaaji. সর্বস্বত্ব সংরক্ষিত।
+        © 2026 11xbaaji. সর্বস্বত্ব সংরক্ষিত।
       </footer>
 
       {/* Floating Telegram */}

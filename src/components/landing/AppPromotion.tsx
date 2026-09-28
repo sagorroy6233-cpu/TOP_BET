@@ -20,7 +20,7 @@ const registerUrl = "https://11xbaaji.live/register";
 const affiliateUrl = "https://11xbaaji.live/Affiliate";
 
 const primaryActions = [
-  { label: "অ্যাপ ইন্সটল করুন", href: appUrl, icon: Download },
+  { label: "অ্যাপ ইনস্টল করুন", href: appUrl, icon: Download },
   { label: "রেজিস্ট্রেশন করুন", href: registerUrl, icon: UserRoundPlus },
   { label: "এফিলিয়েটে জয়েন করুন", href: affiliateUrl, icon: Handshake },
 ] as const;
@@ -49,14 +49,14 @@ const highlights = [
 ];
 
 const steps = [
-  { number: "01", title: "অফিশিয়াল সাইটে যান", text: "ইন্সটল বাটনে ট্যাপ করে 11Xbaaji-তে প্রবেশ করুন।" },
-  { number: "02", title: "অ্যাপ ইন্সটল করুন", text: "সাইটের নির্দেশনা অনুসরণ করে আপনার ডিভাইসে অ্যাপ সেট আপ করুন।" },
+  { number: "01", title: "অফিশিয়াল সাইটে যান", text: "ইনস্টল বাটনে ট্যাপ করে 11xbaaji-তে প্রবেশ করুন।" },
+  { number: "02", title: "অ্যাপ ইনস্টল করুন", text: "সাইটের নির্দেশনা অনুসরণ করে আপনার ডিভাইসে অ্যাপ সেট আপ করুন।" },
   { number: "03", title: "অ্যাকাউন্টে প্রবেশ করুন", text: "নতুন হলে রেজিস্ট্রেশন করে শুরু করুন, অথবা আপনার অ্যাকাউন্টে লগ ইন করুন।" },
 ];
 
 function InstallLink({
   className = "",
-  children = "অ্যাপ ইন্সটল করুন",
+  children = "অ্যাপ ইনস্টল করুন",
 }: {
   className?: string;
   children?: ReactNode;
@@ -102,8 +102,8 @@ export function AppPromotion() {
       <section className="app-hero relative isolate overflow-hidden text-white">
         <div className="app-hero-lines pointer-events-none absolute inset-0 -z-10" />
         <header className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
-          <a href="#top" aria-label="11Xbaaji হোম" className="shrink-0">
-            <img src={logo} alt="11Xbaaji" className="h-16 w-16 object-contain" />
+          <a href="#top" aria-label="11xbaaji হোম" className="shrink-0">
+            <img src={logo} alt="11xbaaji" className="h-16 w-16 object-contain" />
           </a>
           <nav className="hidden items-center gap-8 text-sm text-white/70 md:flex" aria-label="প্রধান নেভিগেশন">
             <a className="transition hover:text-white" href="#features">অ্যাপের সুবিধা</a>
@@ -111,21 +111,21 @@ export function AppPromotion() {
             <a className="transition hover:text-white" href="#faq">প্রশ্নোত্তর</a>
           </nav>
           <InstallLink className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-(--app-lime) px-4 text-sm font-bold text-(--app-forest) transition hover:bg-white sm:px-5">
-            <span className="hidden sm:inline">অ্যাপ ইন্সটল করুন</span>
-            <span className="sm:hidden">ইন্সটল</span>
+            <span className="hidden sm:inline">অ্যাপ ইনস্টল করুন</span>
+            <span className="sm:hidden">ইনস্টল</span>
           </InstallLink>
         </header>
 
         <div id="top" className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-10 sm:px-8 sm:pb-24 sm:pt-14 lg:grid-cols-[1fr_0.9fr] lg:gap-8 lg:px-12 lg:pb-28 lg:pt-16">
           <div className="relative z-10 max-w-2xl">
             <p className="mb-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-(--app-lime)">
-              <span className="h-2 w-2 rounded-full bg-(--app-lime)" /> 11Xbaaji mobile app
+              <span className="h-2 w-2 rounded-full bg-(--app-lime)" /> 11xbaaji mobile app
             </p>
             <h1 className="max-w-[12ch] text-5xl font-bold leading-[1.16] sm:text-6xl lg:text-7xl">
               খেলার দুনিয়া<br /><span className="text-(--app-lime)">এখন হাতের</span><br />মুঠোয়।
             </h1>
             <p className="mt-6 max-w-lg text-base leading-8 text-white/70 sm:text-lg">
-              আপনার পছন্দের স্পোর্টস, লাইভ ম্যাচের আপডেট আর সহজ অ্যাকাউন্ট অ্যাক্সেস একসঙ্গে পান 11Xbaaji অ্যাপে।
+              আপনার পছন্দের স্পোর্টস, লাইভ ম্যাচের আপডেট আর সহজ অ্যাকাউন্ট অ্যাক্সেস একসঙ্গে পান 11xbaaji অ্যাপে।
             </p>
             <ActionButtons className="mt-9 grid max-w-sm gap-3" />
             <p className="mt-5 flex items-center gap-2 text-xs text-white/50">
@@ -143,7 +143,7 @@ export function AppPromotion() {
                   <span className="flex items-center gap-1"><Wifi size={12} /><span className="h-2 w-4 rounded-sm border border-current" /></span>
                 </div>
                 <div className="flex items-center justify-between px-5 pb-4">
-                  <div className="flex items-center gap-2"><img src={logo} alt="" className="h-8 w-8 rounded-lg object-contain" /><span className="text-sm font-extrabold text-(--app-forest)">11Xbaaji</span></div>
+                  <div className="flex items-center gap-2"><img src={logo} alt="" className="h-8 w-8 rounded-lg object-contain" /><span className="text-sm font-extrabold text-(--app-forest)">11xbaaji</span></div>
                   <span className="grid h-8 w-8 place-items-center rounded-full bg-(--app-lime)/25 text-(--app-forest)"><Smartphone size={15} /></span>
                 </div>
                 <div className="mx-4 rounded-2xl bg-(--app-forest) p-4 text-white">
@@ -185,7 +185,7 @@ export function AppPromotion() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-(--app-forest)">আপনার অ্যাপ, আপনার খেলা</p>
             <h2 className="mt-4 max-w-md text-4xl font-bold leading-tight sm:text-5xl">যা দরকার, সবই <span className="text-(--app-forest)">এক জায়গায়।</span></h2>
-            <p className="mt-5 max-w-md text-base leading-7 text-(--app-muted)">11Xbaaji অ্যাপ এমনভাবে সাজানো, যাতে খেলা খুঁজে পাওয়া ও আপনার অ্যাকাউন্টে যাওয়া থাকে সহজ এবং স্বচ্ছন্দ।</p>
+            <p className="mt-5 max-w-md text-base leading-7 text-(--app-muted)">11xbaaji অ্যাপ এমনভাবে সাজানো, যাতে খেলা খুঁজে পাওয়া ও আপনার অ্যাকাউন্টে যাওয়া থাকে সহজ এবং স্বচ্ছন্দ।</p>
             <p className="mt-7 max-w-md text-sm font-semibold leading-6 text-(--app-forest)">
               আপনার প্রয়োজনীয় ম্যাচ ও অ্যাকাউন্টের তথ্য এক জায়গায় গুছিয়ে দেখুন।
             </p>
@@ -202,7 +202,7 @@ export function AppPromotion() {
 
       <section id="get-started" className="bg-(--app-sand)">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 sm:py-24 md:grid-cols-[0.8fr_1.2fr] lg:px-12">
-          <div className="max-w-md"><p className="text-xs font-bold uppercase tracking-[0.18em] text-(--app-forest)">শুরু করা সহজ</p><h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">কয়েকটি ধাপেই <span className="text-(--app-forest)">শুরু করুন।</span></h2><p className="mt-5 text-base leading-7 text-(--app-muted)">অফিশিয়াল সাইট থেকে অ্যাপ ইন্সটল করে আপনার ডিভাইসেই ব্যবহার শুরু করুন।</p></div>
+          <div className="max-w-md"><p className="text-xs font-bold uppercase tracking-[0.18em] text-(--app-forest)">শুরু করা সহজ</p><h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">কয়েকটি ধাপেই <span className="text-(--app-forest)">শুরু করুন।</span></h2><p className="mt-5 text-base leading-7 text-(--app-muted)">অফিশিয়াল সাইট থেকে অ্যাপ ইনস্টল করে আপনার ডিভাইসেই ব্যবহার শুরু করুন।</p></div>
           <div className="border-t border-(--app-line)">{steps.map((step) => <div key={step.number} className="grid grid-cols-[52px_1fr] gap-4 border-b border-(--app-line) py-6 sm:grid-cols-[72px_1fr] sm:gap-6 sm:py-7"><span className="pt-1 text-sm font-bold tabular-nums text-(--app-forest)">{step.number}</span><div><h3 className="text-lg font-bold">{step.title}</h3><p className="mt-2 max-w-lg text-sm leading-6 text-(--app-muted)">{step.text}</p></div></div>)}</div>
           <ActionButtons className="mt-10 grid gap-3 sm:grid-cols-2 md:col-span-2 lg:grid-cols-3" />
         </div>
@@ -211,7 +211,7 @@ export function AppPromotion() {
       <section id="affiliate" className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 sm:pb-24 lg:px-12">
         <div className="relative grid items-center gap-8 overflow-hidden bg-(--app-forest) px-6 py-12 text-white sm:px-12 sm:py-16 md:grid-cols-[minmax(0,1fr)_auto] lg:px-16">
           <div className="pointer-events-none absolute inset-y-0 right-[32%] hidden border-l border-white/10 md:block" aria-hidden="true" />
-          <div className="relative max-w-2xl"><p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-(--app-lime)"><Trophy size={15} /> পার্টনার প্রোগ্রাম</p><h2 className="mt-5 max-w-xl text-4xl font-bold leading-tight sm:text-5xl">11Xbaaji-এর সঙ্গে এফিলিয়েট পার্টনার হোন।</h2><p className="mt-4 max-w-lg text-sm leading-7 text-white/70">প্রোগ্রামের শর্ত, প্রয়োজনীয় তথ্য এবং যোগদানের ধাপ জানতে অফিসিয়াল এফিলিয়েট পেজটি দেখুন।</p></div>
+          <div className="relative max-w-2xl"><p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-(--app-lime)"><Trophy size={15} /> পার্টনার প্রোগ্রাম</p><h2 className="mt-5 max-w-xl text-4xl font-bold leading-tight sm:text-5xl">11xbaaji-এর সঙ্গে এফিলিয়েট পার্টনার হোন।</h2><p className="mt-4 max-w-lg text-sm leading-7 text-white/70">প্রোগ্রামের শর্ত, প্রয়োজনীয় তথ্য এবং যোগদানের ধাপ জানতে অফিসিয়াল এফিলিয়েট পেজটি দেখুন।</p></div>
           <ActionButton action={primaryActions[2]} className={`${actionButtonClassName} relative md:min-w-64`} />
         </div>
       </section>
@@ -250,7 +250,7 @@ export function AppPromotion() {
           </div>
           <div className="border-t border-(--app-line)">
             {[
-              ["অ্যাপ কোথা থেকে ইন্সটল করব?", "উপরের অ্যাপ ইন্সটল করুন বাটনে ট্যাপ করুন। এটি 11Xbaaji-এর অফিসিয়াল সাইটে নিয়ে যাবে; সেখানকার নির্দেশনা অনুসরণ করুন।"],
+              ["অ্যাপ কোথা থেকে ইনস্টল করব?", "উপরের অ্যাপ ইনস্টল করুন বাটনে ট্যাপ করুন। এটি 11xbaaji-এর অফিসিয়াল সাইটে নিয়ে যাবে; সেখানকার নির্দেশনা অনুসরণ করুন।"],
               ["নতুন অ্যাকাউন্ট কীভাবে খুলব?", "রেজিস্ট্রেশন করুন বাটনে ট্যাপ করে অফিসিয়াল রেজিস্ট্রেশন পেজে যান এবং সেখানে দেওয়া ধাপগুলো অনুসরণ করুন।"],
               ["এফিলিয়েট প্রোগ্রামে কীভাবে যোগ দেব?", "এফিলিয়েটে জয়েন করুন বাটন থেকে অফিসিয়াল এফিলিয়েট পেজে যান। যোগদানের শর্ত ও বিস্তারিত সেখানে দেখুন।"],
             ].map(([question, answer]) => (
@@ -268,8 +268,8 @@ export function AppPromotion() {
       </section>
 
       <footer className="border-t border-(--app-line) bg-white px-5 py-8 sm:px-8 lg:px-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left"><img src={logo} alt="11Xbaaji" className="h-14 w-14 object-contain" /><p className="max-w-2xl text-xs leading-6 text-(--app-muted)">১৮+। দায়িত্বশীলভাবে খেলুন। স্থানীয় আইন ও নিয়ম মেনে চলুন। জুয়া আর্থিক ঝুঁকির কারণ হতে পারে।</p><a href={appUrl} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-(--app-forest) hover:underline">অফিশিয়াল সাইট <ArrowRight className="ml-1 inline" size={13} /></a></div>
-        <p className="mx-auto mt-6 max-w-7xl text-center text-[11px] text-(--app-muted)">© 2026 11Xbaaji</p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left"><img src={logo} alt="11xbaaji" className="h-14 w-14 object-contain" /><p className="max-w-2xl text-xs leading-6 text-(--app-muted)">১৮+। দায়িত্বশীলভাবে খেলুন। স্থানীয় আইন ও নিয়ম মেনে চলুন। জুয়া আর্থিক ঝুঁকির কারণ হতে পারে।</p><a href={appUrl} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-(--app-forest) hover:underline">অফিশিয়াল সাইট <ArrowRight className="ml-1 inline" size={13} /></a></div>
+        <p className="mx-auto mt-6 max-w-7xl text-center text-[11px] text-(--app-muted)">© 2026 11xbaaji</p>
       </footer>
     </main>
   );
